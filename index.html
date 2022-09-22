@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue-cdn</title>
+    <meta charset="utf-8">
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+<script src="https://unpkg.com/vue@3"></script>
+
+<div id="app">
+    <div class="app__todo-container">
+        <h2 class="app__todo-container-title">Todolist</h2>
+        <div class="todo-container__form">
+            <input v-model="todo"  type="text" placeholder="Your todo..."/>
+            <button @click="todoHandler" class="form-btn"><i class="ri-add-line"></i></button>
+        </div>
+        <div v-if="todos.length > 0" class="todos">
+            <div v-for="todo in todos" class="todos__item">
+                <h5>{{ todo.title }}</h5>
+                <div class="todos__item-action">
+                    <i @click="deleteTodo(todo.id)" id="delete" class="ri-delete-bin-line"></i>
+                    <i @click="updateTodo(todo.id)" id="update" class="ri-edit-2-line"></i>
+                </div>
+            </div>
+        </div>
+        <div v-else class="todo-info">
+            <h5>No todo you add..</h5>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

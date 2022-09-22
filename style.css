@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-primary: #1b9cfc;
+    --item-clr:#9c88ff;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:"Montserrat",sans-serif;
+}
+
+#app {
+    background-color: var(--bg-primary);
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__todo-container {
+    width:34%;
+    border-radius:6px;
+    background-color: #fff;
+    padding:1.4rem 1.2rem;
+}
+
+.app__todo-container-title {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom:15px;
+}
+
+.todo-container__form {
+    display: flex;
+    align-items: center;
+}
+
+.todo-container__form input {
+    flex:1;
+    padding:0.8rem 1rem;
+    border-radius: 5px;
+    border:solid 1px #ddd;
+    font-weight:500;
+    outline:none;
+    font-size:0.85em;
+}
+
+.form-btn {
+    padding:0.6rem 1rem;
+    background-color: var(--item-clr);
+    color:#fff;
+    font-weight: 600;
+    font-size:1.2em;
+    border:none;
+    margin-left:8px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+.todo-info {
+    text-align: center;
+    padding:1rem 0 0;
+}
+
+.todo-info h5 {
+    font-size:1em;
+}
+
+.todos{
+    padding:1.2rem 0 0;
+}
+
+.todos__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:8px 0 0;
+}
+
+.todos__item-action i {
+    font-size:1.1em;
+    cursor:pointer;
+}
+
+#delete {
+    margin-right:6px;
+    color:crimson;
+}
+
+#update {
+    color:mediumseagreen;
+}
